@@ -1,12 +1,13 @@
 const dotenv = require('dotenv')
-dotenv.config({ path: './.env' })
-require('express-async-errors')
+dotenv.config()
 const express = require('express')
-const Employee = require('./models/employees')
 const app = express()
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
+require('express-async-errors')
+const Employee = require('./models/employees')
 const cors = require('cors')
 app.use(cors())
-app.use(express.json())
 var mongoose = require('mongoose'); 
 const middleware = require('./utils')
 app.use(express.static('dist'))

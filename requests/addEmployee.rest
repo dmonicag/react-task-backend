@@ -1,0 +1,28 @@
+GET http://localhost:3000/api/employees
+
+###
+POST http://localhost:3000/api/employees
+Content-Type: application/json
+
+{
+    "firstname": "nnnnn",
+    "lastname": "sasa",
+    "dateofbirth": "12-12-2003",
+    "jobtitle": "dddd",
+    "phonenumber":"555555",
+    "email": "fgfgfg",
+    "address": "sdsdsds, qwerty" 
+    
+}
+
+###
+DELETE http://localhost:3000/api/employees/6544552e15743c7b4cc1eae4
+
+###
+PUT http://localhost:3000/api/employees/6543f15b180158bace909647
+Content-Type: application/json
+
+{
+    "phonenumber": "11111111",
+    "lastname": "Samuels"
+}

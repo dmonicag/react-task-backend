@@ -8,6 +8,7 @@ app.use(cors())
 app.use(express.json())
 var mongoose = require('mongoose'); 
 const middleware = require('./utils')
+app.use(express.static('dist'))
 
 app.get('/api/employees', (request, response) => {
     Employee

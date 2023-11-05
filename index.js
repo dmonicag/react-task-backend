@@ -1,4 +1,5 @@
-require('dotenv').config()
+const dotenv = require('dotenv')
+dotenv.config({ path: './.env' })
 require('express-async-errors')
 const express = require('express')
 const Employee = require('./models/employees')
